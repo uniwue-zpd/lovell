@@ -1,10 +1,11 @@
-      body{
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        color: #333;
-        line-height: 1.42857143;
-        margin: 10px 0 0;
-        overflow-y: scroll; /* always display vertical scrollbar */
-      }
+body{
+	font-family: "Calisto MT", "Times New Roman", serif;
+	color: #333;
+	line-height: 1.42857143;
+	margin:0;
+	padding:0;
+	overflow-y: scroll; /* always display vertical scrollbar */
+}
 
       #macro_level{
         margin-bottom: 100px;
@@ -13,12 +14,12 @@
 
       .synopsis-headline {
         position: sticky;
-        top: 12px;
+        top:0;
         z-index: 2;
         background: #999999;
         color: white;
         text-align: center;
-        border: solid 1px white;
+        border: solid 3px white;
         font-size: 18px;
         padding: 4px;
         text-shadow: 0 0 10px rgba(0,0,0,0.6);
@@ -140,10 +141,25 @@
         height: 25px;
       }
 
-p { text-indent:2em; margin:0; font-family:"Cambria", "Times New Roman"; }
+div { margin:0; padding:0; }
+
+p { text-indent:2em; margin:0; font-family:"Cambria", "Times New Roman", serif; }
 p.align-right { text-align:right; text-indent:0; }
 p.align-center { text-align:center; text-indent:0; margin:0.5em 0; }
 p.verse { text-indent:0; font-size:smaller; margin:0.5em 0 0.5em 2em; }
 .font-bold { font-weight:bold; }
 
 span.page-break { font-style:italic; color:silver; }
+
+td.navigation-vertical table { margin:0 auto; border-collapse:separate; position: sticky; top:4em; }
+td.navigation-vertical table td { background-color:silver; border:2px solid inherit; width:2em; height:2em; vertical-align:middle; text-align:center; }
+td.navigation-vertical table td.vacat { background-color:white !important; width:2em; height:2em; }
+td.navigation-vertical table tr.selected td {border:2px solid orange; background-color:yellow; }
+td.navigation-vertical { vertical-align:top; }
+
+th.header { text-align:left; font-size:x-large; background-color:gray;
+        color: white;
+        border: solid 3px white;
+        padding: 0.5em 1em;
+        text-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
