@@ -1,0 +1,149 @@
+      body{
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: #333;
+        line-height: 1.42857143;
+        margin: 10px 0 0;
+        overflow-y: scroll; /* always display vertical scrollbar */
+      }
+
+      #macro_level{
+        margin-bottom: 100px;
+        table-layout: fixed;
+      }
+
+      .synopsis-headline {
+        position: sticky;
+        top: 12px;
+        z-index: 2;
+        background: #999999;
+        color: white;
+        text-align: center;
+        border: solid 1px white;
+        font-size: 18px;
+        padding: 4px;
+        text-shadow: 0 0 10px rgba(0,0,0,0.6);
+      }
+      .synopsis-segment {
+        padding: 0 15px;
+        vertical-align: top;
+        text-align: justify;
+        font-family: serif;
+        font-size: 18px;
+        line-height: 1.5;
+        border-right: dotted 1px #999;
+        word-wrap: break-word;
+      }
+      .synopsis-segment:last-child { border-right: 0 none; }
+
+      .dir_right{ direction: rtl; }
+
+      /* styling of missing segment */
+      .synopsis-missing{
+        text-align: center;
+        color: #999999;
+        font-style: italic;
+      }
+
+      /* elements for colored markings of differences */
+      span.copy{ background-color:#EAEAEA; }
+      span.add{ background-color:#99FF99; }
+      span.del{ background-color:#FFAAAA; }
+      span.sub{ background-color:#BBBBFF; }
+
+      /* menu of micro levels */
+      .synopsis-ml-menu { padding: 20px 5px 40px; }
+      .collapse{
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background-color: #f5f5f5;
+        border: 1px solid #e3e3e3;
+        border-bottom: none;
+        border-radius: 4px;
+      }
+      .btn-ml-menu {
+        display: block;
+        padding: 1px;
+        text-align: center;
+        border: 1px solid #dddddd;
+        background-color: #f8f8f8;
+        border-radius: 4px;
+        cursor: pointer;
+        color: #337ab7;
+      }
+      .btn-ml-menu:hover { color: #333; }
+
+      /* neu */
+      .btn-ml-menu-non {
+         display: block;
+         padding: 1px;
+         border: 1px solid #dddddd;
+         background-color: #f8f8f8;
+         border-radius: 4px;
+         color: #337ab7;
+       }
+
+      .wasserzeichen{
+        display:none;
+        position: absolute;
+        left: 50%;
+        text-align: center;
+        color: #d8d8d8;
+        z-index: -1;
+        margin-top: -30px;
+        font-family: serif;
+        font-size: 22px;
+      }
+      .wasserzeichen-inner{
+        position: relative;
+        left: -50%;
+      }
+
+      .micro_level:first-of-type::before{
+        content: '';
+        display: block;
+        height: 25px;
+      }
+
+      .copy-segment{
+        color: #bbb;
+        z-index: -1;
+      }
+      .copy-ref{
+        text-align: center;
+        z-index: -1;
+      }
+      .copy-ref a {
+        cursor: pointer;
+        color: #337ab7;
+        text-decoration: none;
+      }
+
+      .macro-table-rtl{ direction: rtl; }
+      .macro-table-rtl thread{ direction: ltr; }
+      .macro-table-rtl tbody{ direction: ltr; }
+      .macro-table-rtl .synopsis-segment:last-child { border-right: dotted 1px #999; }
+      .macro-table-rtl .synopsis-segment:first-child { border-right: 0 none; }
+      .macro-table-rtl .apparatus_rtl .apparatus-table-inner td:last-child { text-align: right; }
+
+      /* style of renditions and macros */
+      .lera-unclear{ opacity: 0.8; text-shadow: 0 0 5px #333; }
+      .lera-head{ font-size: 125%; font-weight: bold; }
+      .lera-alteration{ color: red; }
+      .lera-name { color: darkblue; }
+      .lera-name-person {}
+
+      /* html-download specific */
+      .micro_level:first-of-type::before{
+        content: '';
+        display: block;
+        height: 25px;
+      }
+
+p { text-indent:2em; margin:0; font-family:"Cambria", "Times New Roman"; }
+p.align-right { text-align:right; text-indent:0; }
+p.align-center { text-align:center; text-indent:0; margin:0.5em 0; }
+p.verse { text-indent:0; font-size:smaller; margin:0.5em 0 0.5em 2em; }
+.font-bold { font-weight:bold; }
+
+span.page-break { font-style:italic; color:silver; }
